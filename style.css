@@ -50,7 +50,7 @@ main {
     -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.29);
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.29);
     background: #fff;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     width: 100%;
     top: 0;
@@ -122,7 +122,7 @@ main {
     justify-content: center;
 }
 
-.card {
+/* .card {
     width: 20rem;
     height: 15rem;
     display: flex;
@@ -135,7 +135,7 @@ main {
     border-top-right-radius: 2rem;
     transition: transform .2s ease;
 
-}
+} */
 
 .card:hover {
     transform: scale(1.05);
@@ -341,7 +341,6 @@ main {
     width: 0;
     height: 0.2rem;
     transition: all 0.5s ease;
-    transform-origin: left;
 }
 
 .hover-example-1 li:hover:after {
@@ -381,17 +380,43 @@ main {
     top: -7px;
     left: -5px;
     cursor: pointer;
-    opacity: 1;
+    opacity: 0;
     /* hide this */
     z-index: 2;
     /* and place it over the hamburger */
     -webkit-touch-callout: none;
 }
 
-#burger input:checked~span:nth-child(2) {
-    transform: rotate(-45deg);
+.burger-menu {
+    transform: scale(0);
+    position: absolute;
+    left: 4rem;
+    top: -1rem;
+    transition: all 0.2s ease;
 }
 
+#burger input:checked~span:nth-child(2) {
+    transform: rotate(45deg) translate(0, -2px);
+}
+#burger input:checked~span:nth-child(3) {
+    transform: scale(0) translate(-100px, -2px)
+}
+#burger input:checked~span:nth-child(4) {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+#burger input:checked ~ .burger-menu {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+.burger-menu li {
+    list-style-type: disc;
+    transition: all .2s ease;
+}
+.burger-menu li:hover {
+    color: #FF7B08;
+}
 
 .grid-container {
     margin-top: 3.5rem;
@@ -436,7 +461,6 @@ main {
 .gallery .gallery-items {
     transition: all 0.2s ease;
     width: 100%;
-
     box-shadow: 0px 4px 8px #0000002b;
 
 }
@@ -446,15 +470,43 @@ main {
     box-shadow: 0px 4px 24px #0000002b;
 }
 
+.top-margin {
+    margin-top: 3.5rem;
+}
+
+.knappibilden {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    background: #0000004f;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.container-fluid {
+    background: black;
+    padding: 1rem;
+}
 
 
 /* Media Queries */
-@media screen and (max-width: 730px) {
+
+@media screen and (max-width: 880px) {
+
+    .nav_links.nav_links-2 {
+        display: none;
+    }
+
+
     .gallery {
         grid-template-columns: 1fr 1fr;
     }
-
 }
+
 @media screen and (max-width: 420px) {
     .gallery {
         grid-template-columns: 1fr;
