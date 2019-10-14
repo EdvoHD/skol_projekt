@@ -4,37 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat:900|Playfair+Display|Sacramento|Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Prototyping atoms, molecules, organisms, templates, pages </title>
 </head>
 <body>
-    <nav id="nav_bar">
-        <ul class="nav_links">
-            <li><a href="index.html">Home </a></li>
-            <li><a href="browse.html">Browse</a></li>
-            <li><a href="prototype.html" id="active">Prototyping</a></li>
-            <li><a href="bootstrap-test.html">Bootstrap</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <div id="burger">
-
-                    <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                    <ul class="burger-menu">
-                        <a href=""><li>Home</li></a>
-                        <a href=""><li>Browse</li></a>
-                        <a href=""><li>Prototype</li></a>
-                    </ul>
-                </div>
-        </ul>
-        <ul class="nav_links nav_links-2">
-            <li><a href="">Register <span class="nav-underline"></span></a></li>
-            <li><a href="">Log in</a></li>
-        </ul>
+    <nav id="nav_bar" role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            
+            <ul id="menu" class="hover-effect-1">
+                <a href="index.html"><li>Index</li></a>
+                <a href="browse.html"><li>Browse</li></a>
+                <a href="prototype.html"><li>Prototyping</li></a>
+                <a href="gallery.html"><li>Gallery</li></a>
+            </ul>
+        </div>
     </nav>
+
     <main class="main">
         <section class="atoms">
             <h1>Atoms</h1>
@@ -71,35 +61,90 @@
                 <h2>Hover Effects</h2>
                 <div class="hovers">
                     <nav>
-                        <ul class="hover-example-1">
+                        <ul class="hover-effect-1">
                             <li><a href="#">Kort text</a></li>
                             <li><a href="#">Väldigt lång text</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-            <div class="content">
-                <div id="burger">
-
-                    <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                    <ul class="burger-menu">
-                        <a href="">
-                            <li>Home</li>
-                        </a>
-                        <a href="">
-                            <li>Browse</li>
-                        </a>
-                        <a href="">
-                            <li>Prototype</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
         </section>
     </main>
+
+    <div class="timeline-prototype">
+        <div class="tl-wrapper">
+            <div class="tl-element">
+                <div class="tl-text">
+                    <h2>What I can do for you.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</p>
+                    <a href="" class="btn btn--primary">knapp</a>
+                </div>
+                <div class="tl-image">
+                    <img src="images/maxprofilepic-2739-4.jpg" alt="">
+                </div>
+            </div>
+            <div class="tl-element">
+                <div class="tl-text">
+                    <h2>Why pick me?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</p>
+                    <a href="" class="btn btn--primary">knapp</a>
+                </div>
+                <div class="tl-image">
+                    <img src="images/maxprofilepic-3509.jpg" alt="">
+                </div>
+            </div>
+            <div class="tl-element">
+                <div class="tl-text">
+                    <h2>Why pick me?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</p>
+                    <a href="" class="btn btn--primary">knapp</a>
+                </div>
+                <div class="tl-image">
+                    <img src="images/maxprofilepic-2396-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="tl-element">
+                <div class="tl-text">
+                    <h2>Why pick me?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</p>
+                    <a href="" class="btn btn--primary">knapp</a>
+                </div>
+                <div class="tl-image">
+                    <img src="images/maxprofilepic-3541.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="packet-card-section">
+        <div class="packet-card-wrapper">
+            <div class="packet-card">
+                <a href="#" class="card">
+                    <h1 class="card-name">Produktnamn</h1>
+                    <img src="https://media.outl1.se/catalog/product/cache/874fc173a2c07792bfec1f1f40056573/d/i/dirt-cykel_2.jpg" alt="product_image_1" class="card-img">
+                    <h2 class="card-price">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, labore!</h2>
+                    <div class="packet-card-button">
+                        <button class="btn btn--primary">knapp</button>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <h1 class="card-name">Produktnamn</h1>
+                    <img src="https://media.outl1.se/catalog/product/cache/874fc173a2c07792bfec1f1f40056573/d/i/dirt-cykel_2.jpg" alt="product_image_1" class="card-img">
+                    <h2 class="card-price">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, labore!</h2>
+                    <div class="packet-card-button">
+                        <button class="btn btn--primary">knapp</button>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <h1 class="card-name">Produktnamn</h1>
+                    <img src="https://media.outl1.se/catalog/product/cache/874fc173a2c07792bfec1f1f40056573/d/i/dirt-cykel_2.jpg" alt="product_image_1" class="card-img">
+                    <h2 class="card-price">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, labore!</h2>
+                    <div class="packet-card-button">
+                        <button class="btn btn--primary">knapp</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

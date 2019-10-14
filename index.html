@@ -4,49 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8585c03061.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat:900|Playfair+Display|Sacramento|Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
 <body>
-    <div>
-    <nav id="nav_bar">
-            <ul class="nav_links">
-                <li><a href="index.html" id="active">Home</a></li>
-                <li><a href="browse.html">Browse</a></li>
-                <li><a href="prototype.html">Prototyping</a></li>
-                <li><a href="bootstrap-test.html">Bootstrap</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+        <nav id="nav_bar" role="navigation">
+            <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            
+            <ul id="menu" class="hover-effect-1">
+                <a href="index.html"><li>Index</li></a>
+                <a href="browse.html"><li>Browse</li></a>
+                <a href="prototype.html"><li>Prototyping</li></a>
+                <a href="gallery.html"><li>Gallery</li></a>
             </ul>
-            <ul class="nav_links nav_links-2">
-                <li><a href="">Register</a></li>
-                <li><a href="">Log in</a></li>
-            </ul>
-    </nav>
-    </div>
+            </div>
+        </nav>
 
-    <header class="header">
-        <div class="header__text-box">
+    <header id="header" class="header">
+        <div class="header-text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary--main">Main</span>
-                <span class="heading-primary--sub">Sub</span>
+                <span class="heading-primary--main">lorem.</span>
+                <span class="heading-primary--sub">Lorem, ipsum.</span>
             </h1>
-            <a href="#" class="btn">Click me</a>
+            <a href="#packet-section" class="btn btn-hero">show prices</a>
         </div>
     </header>
     <main>
-
         <section id="about">
             <div class="about">
-                <div class="about_text">
-                    <h1>About</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita totam impedit dolor dolore animi. Molestias asperiores qui, magni quasi id accusamus officia deserunt voluptate quis dolore? Ducimus vitae quo obcaecati natus facere voluptate quisquam, perspiciatis non et, expedita nisi architecto saepe exercitationem hic omnis inventore id dolore animi quidem totam atque aut explicabo deserunt. Quibusdam possimus ducimus asperiores architecto voluptatem fugit, temporibus hic aspernatur suscipit in tempora nihil quod dolorum aliquid rerum eligendi error eius, non blanditiis rem aperiam maxime ea! Corrupti facilis ipsa quibusdam recusandae voluptates reiciendis velit sed harum suscipit repudiandae illo, iste quasi excepturi mollitia non deserunt.</p>
+                <div id="scene" class="about-cards_wrapper">
+                    <div class="about-card">
+                        <div class="about-img">
+                            <img src="images/maxprofilepic-3430.jpg" alt="profile-card">
+                        </div>
+                        <div class="about-card_text">
+                            <h2>Edvin Aginger</h2>
+                            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia modi eos, earum voluptatum perspiciatis sapiente asperiores quae, temporibus, tenetur commodi officiis hic eaque. Ut excepturi at qui dignissimos temporibus veniam? </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <div class="btt">
+            
+        </div>
+        <section id="timeline">
+            <div class="timeline-prototype">
+                <div class="tl-wrapper">
+                    <div class="tl-element">
+                        <div class="tl-text">
+                            <h2>What I can do for you.</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</p>
+                            <a href="" class="btn btn--primary">knapp</a>
+                            <div class="tl-element-dot-1"></div>
+                        </div>
+                        <div class="tl-image">
+                            <img src="images/maxprofilepic-2739-4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="tl-element">
+                        <div class="tl-text">
+                            <h2>Why pick me?</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</p>
+                            <a href="" class="btn btn--primary">knapp</a>
+                            <div class="tl-element-dot-2"></div>
+                        </div>
+                        <div class="tl-image">
+                            <img src="images/maxprofilepic-3509.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="tl-element">
+                        <div class="tl-text">
+                            <h2>Lorem, ipsum.</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</p>
+                            <a href="" class="btn btn--primary">knapp</a>
+                            <div class="tl-element-dot-3"></div>
+                        </div>
+                        <div class="tl-image">
+                            <img src="images/maxprofilepic-2396-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="tl-element">
+                        <div class="tl-text">
+                            <h2>Lorem, ipsum dolor.</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</p>
+                            <a href="" class="btn btn--primary">knapp</a>
+                            <div class="tl-element-dot-4"></div>
+                        </div>
+                        <div class="tl-image">
+                            <img src="images/maxprofilepic-3541.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="packet-section">
+            <div class="packet-wrapper">
+                <a href="#" data-tilt class="packet-card">
+                    <div class="packet-img">
+                        <img src="images/maxprofilepic-2906.jpg" alt="">
+                    </div>
+                    <div class="packet-text">
+                        <h3>Basic Package</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, veniam?</p>
+                    </div>
+                </a>
+                <a href="#" data-tilt class="packet-card">
+                    <div class="packet-img">
+                        <img src="images/maxprofilepic-2906.jpg" alt="">
+                    </div>
+                    <div class="packet-text">
+                        <h3>Premium Package</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, veniam?</p>
+                        <ul>
+                            <li>50 edited images</li>
+                            <li>4 photo-location</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="#" data-tilt class="packet-card">
+                    <div class="packet-img">
+                        <img src="images/maxprofilepic-2906.jpg" alt="">
+                    </div>
+                    <div class="packet-text">
+                        <h3>Lorem.</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, veniam?</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="footer-wrapper">
+                <div class="socials">
+                        <a href="#"><li><i class="fab fa-instagram"></i></li></a>
+                    <a href="#"><li><i class="fab fa-facebook"></i></li></a>
+                    <a href="#"><li><i class="fab fa-youtube"></i></li></a>   
+                </div>
+
+                <div class="form">
+                    <form action="/action_page.php" class="form-wrapper">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name..">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="Your e-mail..">
+                        </div>
+                        <div>
+                            <label for="textabout">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <div class="back-to-top" id="sticky">
+            <a href="#header">Back to top<i class="fas fa-arrow-circle-up"></i></a>
+        </div>
     </main>
 
     <footer>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"></script>
+   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js"></script> -->
+    <script src="script.js"></script>
+
+
 </body>
 </html>
