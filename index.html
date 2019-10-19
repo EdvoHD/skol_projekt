@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/8585c03061.js" crossorigin="anonymous"></script>
+    <!-- Google fonts ger error på validering, kan inte göra något åt det tyvärr-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat:900|Playfair+Display|Sacramento|Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/favicon_package/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon_package/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon_package/favicon-16x16.png">
@@ -16,22 +17,23 @@
     <meta name="theme-color" content="#ffffff">
     <title>Home</title>
 </head>
-<body>
-        <nav id="nav_bar" role="navigation">
+<body id="body">
+        <nav id="nav_bar">
             <div id="menuToggle">
             <input type="checkbox" />
+            <!-- Burger menu ikon med spans-->
             <span></span>
             <span></span>
             <span></span>
             
             <ul id="menu" class="hover-effect-1">
-                <a href="index.html"><li>Index</li></a>
-                <a href="browse.html"><li>Browse</li></a>
-                <a href="Java_experiment.html"><li>JavaScript</li></a>
-                <a href="prototype.html"><li>Prototyping</li></a>
-                <a href="gallery.html"><li>Gallery</li></a>
+                <li><a href="#body">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#packet-section">Prices</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
             </div>
+            <!-- Logotyp -->
             <div class="banner">
                 <div class="banner-wrapper">
                     <div class="banner-container">
@@ -41,6 +43,7 @@
             </div>
         </nav>
 
+        <!-- Jumbotron/Hero/welcome-->
     <header id="header" class="header">
         <div class="header-text-box">
             <h1 class="heading-primary">
@@ -51,9 +54,10 @@
         </div>
     </header>
     <main>
+        <!-- Om Mig -->
         <section id="about">
             <div class="about">
-                <div id="scene" class="about-cards_wrapper">
+                <div class="about-cards_wrapper">
                     <div class="about-card">
                         <div class="about-img">
                             <img src="images/compressed/profile_image.jpg" alt="profile-card">
@@ -66,10 +70,12 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modulär timeline som kan lägga oändligt med bilder i rad-->
         <section id="timeline">
             <div class="timeline-prototype">
                 <div class="tl-wrapper">
-                    <div class="tl-element">
+                    <div class="tl-element"> <!-- Själva parent till både bild och texten i timeline-->
                         <div class="tl-text">
                             <h2>What I can do for you.</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</p>
@@ -116,17 +122,18 @@
                 </div>
             </div>
         </section>
+        <!-- JavaScript experimentering -->
         <section id="extras">
             <div class="extras-wrapper">
                 <div class="extras-menu">
                     <ul>
-                        <button id="extra-text-1" class="extra-btn" onclick="contentSwitch1()">item 1</button>
-                        <button id="extra-text-2" class="extra-btn" onclick="contentSwitch2()">item 2</button>
-                        <button id="extra-text-3" class="extra-btn" onclick="contentSwitch3()">item 3</button>
+                        <li><button id="extra-text-1" class="extra-btn" onclick="contentSwitch1()">item 1</button></li>
+                        <li><button id="extra-text-2" class="extra-btn" onclick="contentSwitch2()">item 2</button></li>
+                        <li><button id="extra-text-3" class="extra-btn" onclick="contentSwitch3()">item 3</button></li>
                     </ul>
                 </div>
                 <div class="extras-img">
-                    <img id="extras-image" src="images/compressed/burger_image.jpg" alt="">
+                    <img id="extras-image" src="images/compressed/sunset_image.jpg" alt="">
                 </div>
                 <div class="extras-text">
                     <h2 id="extras-h2">Dynamic content</h2>
@@ -134,9 +141,7 @@
                 </div>
             </div>
         </section>
-
-
-
+        <!-- Cards sektionen där säljpunkten på sidan är-->
         <section id="packet-section">
             <div class="packet-wrapper">
                 <a href="" data-tilt class="packet-card">
@@ -172,14 +177,15 @@
                 </a>
             </div>
         </section>
+        <!-- Footer med både social-btns och ett form (som inte gör något för tillfället) 
+        Planen är att kunna skicka direkt till e-mail men det krävs en backend för det -->
         <footer id="footer">
             <div class="footer-wrapper">
                 <div class="socials">
-                    <a href="#"><li><i class="fab fa-instagram"></i></li></a>
-                    <a href="#"><li><i class="fab fa-facebook"></i></li></a>
-                    <a href="#"><li><i class="fab fa-youtube"></i></li></a>   
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>   
                 </div>
-
                 <div class="form">
                     <form action="/action_page.php" class="form-wrapper">
                         <div>
@@ -189,7 +195,7 @@
                             <input type="text" name="email" id="email" placeholder="Your e-mail..">
                         </div>
                         <div>
-                            <label for="textabout">Subject</label>
+                            <label for="subject">Subject</label>
                             <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
                         </div>
                         <div class="form-submit">
@@ -199,17 +205,13 @@
                 </div>
             </div>
         </footer>
+        <!-- Position:fixed knapp som följer med genom hela sidan så man har möjlighet att gå tillbaka till toppen av sidan-->
         <div class="back-to-top">
             <a href="#header"> <span>Back to top</span><i class="fas fa-arrow-circle-up"></i></a>
         </div>
-
-
     </main>
-
-    <footer>
-    </footer>
+    <!-- Script som skapar effekten på mina cards under hover, och den andra är min scriptfil för content switch-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"></script>
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.min.js"></script> -->
     <script src="script.js"></script>
 
 

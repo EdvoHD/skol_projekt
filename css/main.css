@@ -9,21 +9,14 @@
 
 html,
 body {
-    font-size: 16px;
-/*     font-family: 'Playfair Display', serif; */
-/*     font-family: 'Sacramento', cursive; */
+    font-size: 16px; /* Utgår ifrån 16px i rem */
     font-family: 'Source Sans Pro', sans-serif;
-/*     font-family: 'Montserrat', sans-serif; */
     color: #fff;
     background: #3e3e3e;
     width: 100%;
     position: relative;
     overflow: visible;
-    scroll-behavior: smooth;
-}
-
-body {
-    display: grid;
+    scroll-behavior: smooth; /* Page auto-scroll blir snygg tack vare denna */ 
 }
 
 h1 {
@@ -60,15 +53,10 @@ main {
     width: 100%;
 }
 
-#active {
-    border-bottom: 2px solid #FF7B08;
-}
-
-
 /* INDEX */ 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom, #3e3e3e, #088cff85), url(images/compressed/hero_image.jpg);
+    background-image: linear-gradient(to right bottom, #3e3e3e, #088cff85), url(../images/compressed/hero_image.jpg);
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
@@ -422,13 +410,12 @@ input[type=submit] {
 .socials i {
     font-size: 2.5rem;
     color: #FF7B08;
-    transition: transform .2s ease;
     transform-origin: center;
 }
 
 .socials i:hover {
-    transform: scale(1.2);
     filter: brightness(1.2);
+    animation: socials .8s infinite ease;
 }
 
 .socials a {
@@ -456,68 +443,7 @@ input[type=submit] {
     opacity: 0.8;
     font-size: 1rem;
 }
-
-
 /* INDEX END */
-
-
-
-/* BROWSE */ 
-.ecom_wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 3.5rem;
-}
-
-.card {
-    width: 20rem;
-    height: 18rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    color: #3e3e3e;
-    background: #fff;
-    box-shadow: 0px 0.2rem 0.3rem #06060673;
-    margin: 1rem;
-    padding: 1rem 0;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    transition: transform .2s ease;
-
-}
-
-.card:hover {
-    transform: scale(1.05);
-
-}
-
-.card .card-name {
-    font-size: 1.5rem;
-}
-
-.card .card-img {
-    width: 35%;
-    height: auto;
-}
-
-.card-price {
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-.card .btn.btn--primary:hover {
-    transform: translateY(0px);
-    box-shadow: 0px 0px 0px;
-}
-
-.card:hover .btn--primary {
-    filter: brightness(1.1);
-}
-
-/* BROWSE END */ 
-
 
 
 /* Buttons */
@@ -575,118 +501,7 @@ input[type=submit] {
 .btn--disabled {
     opacity: 60%;
 }
-
-
-/* PROTOTYPE */ 
-.main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    padding: 1rem 2rem;
-    background: #e0e0e0;
-    color: #000;
-}
-
-.main .content {
-    border-bottom: solid 1px black;
-    padding: 1rem 1.5rem;
-    display: grid;
-    grid-gap: 1rem;
-}
-
-.main .btn {
-    padding: 0.6rem 4rem;
-}
-
-.main .btn--disabled {
-    opacity: 0.6;
-}
-
-.main .btn--disabled:hover {
-    transform: translateY(0);
-    box-shadow: 0px 0px 0px;
-    cursor: default;
-}
-
-.main .btn--primary.btn--hollow {
-    background: none;
-    border: solid 3px #FF7B08;
-    color: #FF7B08;
-}
-
-.main .btn--secondary.btn--hollow {
-    background: none;
-    border: solid 3px #088CFF;
-    color: #088CFF;
-}
-
-.main .btn--primary.btn--hollow.btn--disabled {
-    background: none;
-    border: solid 3px #FF7B08;
-    color: #FF7B08;
-}
-
-.main .btn--secondary.btn--hollow.btn--disabled {
-    background: none;
-    border: solid 3px #088CFF;
-    color: #088CFF;
-}
-
-.animation {
-    display: flex;
-    justify-content: space-around;
-}
-
-.rotate {
-    width: 150px;
-    height: 150px;
-    background: #FF7B08;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transition-property: transform;
-    transition-duration: 1s;
-}
-
-.rotate:hover {
-    animation-name: rotate-1;
-    animation-duration: 0.2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    cursor: pointer;
-}
-
-.rotate p {
-    padding-top: 35%;
-    text-align: center;
-}
-
-.translate {
-    width: 150px;
-    height: 150px;
-    background: #FF7B08;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
-    transition-property: transform;
-    transition-duration: 1s;
-}
-
-.translate:hover {
-    animation-name: translate;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease;
-    cursor: pointer;
-}
-
-.translate p {
-    padding-top: 35%;
-    text-align: center;
-}
-
-.hovers nav {
-    position: relative;
-}
-
-/* PROTOTYPE END */
-
+/* Buttons END */
 
 
 /* NAVBAR */ 
@@ -831,82 +646,25 @@ input[type=submit] {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .5s ease;
 }
 
 .banner-container {
     margin-bottom: 2rem;
 }
 
-.banner-wrapper:hover .banner-icon {
-    transform: rotate(360deg);
-    transition: .5s ease;
+.banner:hover .banner-icon {
+    transition: all .5s ease;
+    animation-name: rotate-1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-
 
 .banner-icon {
     color: #FF7B08;
     font-size: 2rem;
 }
-
-
 /* NAVBAR END */
-
-
-
-/* GALLERY */ 
-.grid-container {
-    height: 700px;
-    color: #000;
-    display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 100px 100px;
-    grid-gap: 1rem;
-}
-
-.grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #e0e0e0;
-    height: 100px;
-    box-shadow: 0px 2px 6px #00000060;
-    transition: all 0.2s ease;
-}
-
-.grid-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 1px 12px #00000050;
-}
-
-.maps {
-    display: flex;
-    justify-content: center;
-}
-
-.gallery {
-    width: 75%;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    margin: 0 auto;
-    padding-top: 8rem;
-}
-
-.gallery .gallery-items {
-    transition: all 0.2s ease;
-    width: 100%;
-    box-shadow: 0px 4px 8px #0000002b;
-
-}
-
-.gallery .gallery-items:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 24px #0000002b;
-}
-/* GALLERY END */ 
-
 
 
 /* Media Queries */
@@ -1054,6 +812,25 @@ input[type=submit] {
 
 
 /* Animations */
+
+@keyframes socials {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    75% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
 @keyframes rotate-1 {
     from {
         transform: rotate(0deg);

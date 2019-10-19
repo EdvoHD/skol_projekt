@@ -1,0 +1,108 @@
+
+/* PROTOTYPE */ 
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding: 1rem 2rem;
+    background: #e0e0e0;
+    color: #000;
+    padding-top: 3.5rem;
+}
+
+.main .content {
+    border-bottom: solid 1px black;
+    padding: 1rem 1.5rem;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.main .btn {
+    padding: 0.6rem 4rem;
+}
+
+.main .btn--disabled {
+    opacity: 0.6;
+}
+
+.main .btn--disabled:hover {
+    transform: translateY(0);
+    box-shadow: 0px 0px 0px;
+    cursor: default;
+}
+
+.main .btn--primary.btn--hollow {
+    background: none;
+    border: solid 3px #FF7B08;
+    color: #FF7B08;
+}
+
+.main .btn--secondary.btn--hollow {
+    background: none;
+    border: solid 3px #088CFF;
+    color: #088CFF;
+}
+
+.main .btn--primary.btn--hollow.btn--disabled {
+    background: none;
+    border: solid 3px #FF7B08;
+    color: #FF7B08;
+}
+
+.main .btn--secondary.btn--hollow.btn--disabled {
+    background: none;
+    border: solid 3px #088CFF;
+    color: #088CFF;
+}
+
+.animation {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rotate {
+    width: 150px;
+    height: 150px;
+    background: #FF7B08;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.rotate:hover {
+    animation: rotate-1 .2s infinite ease;
+    cursor: pointer;
+}
+
+.rotate p {
+    padding-top: 35%;
+    text-align: center;
+}
+
+.translate {
+    width: 150px;
+    height: 150px;
+    background: #FF7B08;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.translate:hover {
+    animation-name: translate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    cursor: pointer;
+}
+
+.translate p {
+    padding-top: 35%;
+    text-align: center;
+}
+
+.hovers nav {
+    position: relative;
+}
+
+/* PROTOTYPE END */
