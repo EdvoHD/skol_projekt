@@ -11,7 +11,7 @@ html,
 body {
     font-size: 16px; /* Utgår ifrån 16px i rem */
     font-family: 'Source Sans Pro', sans-serif;
-    color: #fff;
+    color: #fff; /* ANVÄNDER MIG INTE AV VARIABLAR FÖR ATT CSS VARIABLE INTE ÄR 100% SUPPORTED */ 
     background: #3e3e3e;
     width: 100%;
     position: relative;
@@ -611,7 +611,6 @@ input[type=submit] {
     padding: 3rem;
     padding-top: 125px;
     list-style-type: none;
-    -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(0, -100%);
     text-align: center;
@@ -663,6 +662,12 @@ input[type=submit] {
 .banner-icon {
     color: #FF7B08;
     font-size: 2rem;
+}
+
+.css-valid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 /* NAVBAR END */
 
